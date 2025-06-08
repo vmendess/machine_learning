@@ -8,6 +8,8 @@ O analista de dados foi incumbido de compreender os padrões de vendas de uma pl
 
 O objetivo final é implementar um modelo preditivo capaz de receber informações de mês, dia da semana, quantidade e características do pedido para gerar uma previsão precisa do valor de venda.
 
+![1](./images/1.png) 
+
 ---
 
 ## Coleta & Preparação dos Dados
@@ -28,6 +30,8 @@ O objetivo final é implementar um modelo preditivo capaz de receber informaçõ
 4. **Tratamento de outliers**  
    - Filtragem de valores de `Amount` acima do **percentil 99**, eliminando os 1 % mais extremos.  
    - **Percentil**: medida estatística que indica o valor abaixo do qual se encontra uma dada porcentagem dos dados.
+
+![2](./images/2.png) 
 
 ---
 
@@ -50,6 +54,8 @@ O objetivo final é implementar um modelo preditivo capaz de receber informaçõ
 5. **Teste ANOVA**  
    - Aplicação de **Análise de Variância (ANOVA)** para comparar médias de `Amount` entre categorias de produto.  
    - **P-valor** < 0,05 indica diferença estatisticamente significativa entre as médias.
+
+![3](./images/3.png) 
 
 ---
 
@@ -76,6 +82,8 @@ O objetivo final é implementar um modelo preditivo capaz de receber informaçõ
    - **RMSE** (Root Mean Squared Error): raiz do erro quadrático médio, penaliza discrepâncias maiores.  
    - **R²** (Coeficiente de Determinação): proporção da variância explicada pelo modelo.
 
+![4](./images/4.png) 
+
 ---
 
 ## Importância das Variáveis (Feature Importance)
@@ -95,6 +103,8 @@ As dez variáveis mais relevantes no modelo **Random Forest sem outliers** foram
 
 - **Feature Importance**: soma da redução de impureza (ex.: redução de variância) proporcionada por cada variável em todas as árvores do ensemble.
 
+![5](./images/5.png) 
+
 ---
 
 ## Conclusões & Próximos Passos
@@ -111,3 +121,5 @@ As dez variáveis mais relevantes no modelo **Random Forest sem outliers** foram
    - Aplicar engenharia de features avançada, por exemplo codificação de interações entre categoria e *fulfilment*.  
    - Testar algoritmos de boosting mais sofisticados (XGBoost, LightGBM) e otimizar hiperparâmetros via **Grid Search** (busca exaustiva em combinação de parâmetros) ou **Random Search** (busca aleatória em espaço de hiperparâmetros).  
    - Estabelecer pipeline de monitoramento em produção com retraining periódico à medida que novos dados sejam coletados.
+
+  ![6](./images/6.png) 
